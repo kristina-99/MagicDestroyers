@@ -19,4 +19,19 @@
 
     public Chainlink BodyArmor { get; set; }
     public Hammer Weapon { get; set; }
+
+    public void HolyBlow()
+    { 
+    
+    }
+
+    public void PurifySoul()
+    {
+
+    }
+
+    public void RighteousWings()
+    {
+
+    }
 }

@@ -19,5 +19,20 @@
 
     public LeatherVest BodyArmor { get; set; }
     public Staff Weapon { get; set; }
+
+    public void Moonfire()
+    {
+
+    }
+
+    public void Starburst()
+    {
+
+    }
+
+    public void OneWithTheNature()
+    {
+
+    }
 }
 

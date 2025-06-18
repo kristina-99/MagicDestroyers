@@ -19,5 +19,20 @@
 
     public ClothRobe BodyArmor { get; set; }
     public Staff Weapon { get; set; }
+
+    public void ArcaneWrath()
+    {
+
+    }
+
+    public void Firewall()
+    {
+
+    }
+
+    public void Meditation()
+    {
+
+    }
 }
 
