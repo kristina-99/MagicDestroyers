@@ -4,7 +4,17 @@
     {
         private int armorPoints;
 
-        public int ArmorPoints { get; set; }
+        public int ArmorPoints
+        {
+            get
+            {
+                return armorPoints;
+            }
+            set
+            {
+                armorPoints = value;
+            }
+        }
 
         public Chainlink()
         {
