@@ -1,4 +1,6 @@
-﻿namespace MagicDestroyers.Weapons.Blunt
+﻿using System;
+
+namespace MagicDestroyers.Weapons.Blunt
 {
     public class Hammer
     {
@@ -12,7 +14,15 @@
             }
             set
             {
-                damage = value;
+                if (value >= 0 && value <= 50)
+                {
+                    damage = value;
+                }
+                else
+                {
+                    damage = 0;
+                    Console.WriteLine("Inappropriate value! The damage points must be between 0 and 50.");
+                }
             }
         }
        
@@ -23,7 +33,7 @@
 
         public void Stun()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

@@ -29,6 +29,7 @@
                 }
                 else 
                 {
+                    faction = "Spellcaster";
                     Console.WriteLine("Inappropriate faction! Should be \"Melee\" or \"Spellcaster\"");
                 }
             }
@@ -47,6 +48,7 @@
                 }
                 else
                 {
+                    name = "no name";
                     Console.WriteLine("The name is too short or too long. Must be between 2 and 10 characters long.");
                 }
             }
@@ -66,6 +68,7 @@
                 }
                 else
                 {
+                    abilityPoints = 0;  
                     Console.WriteLine("Inappropriate value! The ability points must be between 0 and 10.");
                 }
             }
@@ -78,7 +81,15 @@
             }
             set
             {
-                healthPoints = value;
+                if (value >= 0 && value <= 120)
+                {
+                    healthPoints = value;
+                }
+                else
+                {
+                    healthPoints = 0;
+                    Console.WriteLine("Inappropriate value! The health points must be between 0 and 120.");
+                }
             }
         }
         public int Level 
@@ -89,7 +100,15 @@
             }
             set
             {
-                level = value;
+                if (value >= 0 && value <= 100)
+                {
+                    level = value;
+                }
+                else
+                {
+                    level = 0;
+                    Console.WriteLine("Inappropriate value! Level must be between 0 and 100.");
+                }
             }
         }
 
@@ -123,17 +142,17 @@
 
         public void Strike()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Execute()
         {
-
+            throw new NotImplementedException();
         }
 
         public void SkinHarden()
         {
-
+            throw new NotImplementedException();
         }
     }
 }
