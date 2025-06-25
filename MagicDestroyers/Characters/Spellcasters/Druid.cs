@@ -2,7 +2,10 @@
 {
     using System;
     using MagicDestroyers.Armors.Leather;
+    using MagicDestroyers.Armors.Mail;
     using MagicDestroyers.Weapons.Blunt;
+    using MagicDestroyers.Weapons.Sharp;
+
     public class Druid
     {
         private string faction;
@@ -19,17 +22,17 @@
         {
             get
             {
-                return faction;
+                return this.faction;
             }
             set
             {
                 if (value == "Melee" || value == "Spellcaster")
                 {
-                    faction = value;
+                    this.faction = value;
                 }
                 else
                 {
-                    faction = "Spellcaster";
+                    this.faction = "Spellcaster";
                     Console.WriteLine("Inappropriate faction! Should be \"Melee\" or \"Spellcaster\"");
                 }
             }
@@ -38,17 +41,17 @@
         {
             get
             {
-                return name;
+                return this.name;
             }
             set
             {
                 if (value.Length >= 2 && value.Length <= 10)
                 {
-                    name = value;
+                    this.name = value;
                 }
                 else
                 {
-                    name = "no name";
+                    this.name = "no name";
                     Console.WriteLine("The name is too short or too long. Must be between 2 and 10 characters long.");
                 }
             }
@@ -58,17 +61,17 @@
         {
             get
             {
-                return abilityPoints;
+                return this.abilityPoints;
             }
             set
             {
                 if (value >= 0 && value <= 10)
                 {
-                    abilityPoints = value;
+                    this.abilityPoints = value;
                 }
                 else
                 {
-                    abilityPoints = 0;
+                    this.abilityPoints = 0;
                     Console.WriteLine("Inappropriate value! The ability points must be between 0 and 10.");
                 }
             }
@@ -77,17 +80,17 @@
         {
             get
             {
-                return healthPoints;
+                return this.healthPoints;
             }
             set
             {
                 if (value >= 0 && value <= 120)
                 {
-                    healthPoints = value;
+                    this.healthPoints = value;
                 }
                 else
                 {
-                    healthPoints = 0;
+                    this.healthPoints = 0;
                     Console.WriteLine("Inappropriate value! The health points must be between 0 and 120.");
                 }
             }
@@ -96,17 +99,17 @@
         {
             get
             {
-                return level;
+                return this.level;
             }
             set
             {
                 if (value >= 0 && value <= 100)
                 {
-                    level = value;
+                    this.level = value;
                 }
                 else
                 {
-                    level = 0;
+                    this.level = 0;
                     Console.WriteLine("Inappropriate value! Level must be between 0 and 100.");
                 }
             }
@@ -116,28 +119,34 @@
         {
             get
             {
-                return bodyArmor;
+                return this.bodyArmor;
             }
             set
             {
-                bodyArmor = value;
+                this.bodyArmor = value;
             }
         }
         public Staff Weapon 
         {
             get
             {
-                return weapon;
+                return this.weapon;
             }
             set
             {
-                weapon = value;
+                this.weapon = value;
             }
         }
 
-        public Druid()
+        public Druid(string name, int level, int healthPoints)
         {
-
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.Faction = "Melee";
+            this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Staff();
         }
 
         public void Moonfire()

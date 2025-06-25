@@ -10,17 +10,17 @@ namespace MagicDestroyers.Weapons.Blunt
         {
             get
             {
-                return damage;
+                return this.damage;
             }
             set
             {
                 if (value >= 0 && value <= 50)
                 {
-                    damage = value;
+                    this.damage = value;
                 }
                 else
                 {
-                    damage = 0;
+                    this.damage = 0;
                     Console.WriteLine("Inappropriate value! The damage points must be between 0 and 50.");
                 }
             }

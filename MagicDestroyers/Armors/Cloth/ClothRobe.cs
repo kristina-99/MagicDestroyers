@@ -10,17 +10,17 @@ namespace MagicDestroyers.Armors.Cloth
         {
             get
             {
-                return armorPoints;
+                return this.armorPoints;
             }
             set 
             {
                 if (value >= 0 && value <= 100)
                 {
-                    armorPoints = value;
+                    this.armorPoints = value;
                 }
                 else
                 {
-                    armorPoints = 0;
+                    this.armorPoints = 0;
                     Console.WriteLine("Inappropriate value! The armor points must be between 0 and 100.");
                 }
             }    

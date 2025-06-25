@@ -10,13 +10,13 @@ namespace MagicDestroyers.Armors.Leather
         {
             get
             { 
-                return armorPoints;
+                return this.armorPoints;
             }
             set 
             {
                 if (value >= 0 && value <= 100)
                 {
-                    armorPoints = value;
+                    this.armorPoints = value;
                 }
                 else
                 {
