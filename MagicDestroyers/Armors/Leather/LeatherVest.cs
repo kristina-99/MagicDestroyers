@@ -28,7 +28,7 @@ namespace MagicDestroyers.Armors.Leather
 
         public LeatherVest()
         {
-
+            this.ArmorPoints = 10;
         }
     }
 }

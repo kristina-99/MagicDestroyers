@@ -138,13 +138,35 @@
             }
         }
 
-        public Druid(string name, int level, int healthPoints)
+        public Druid()
+        {
+            this.Name = "Bob";
+            this.Level = level;
+            this.HealthPoints = 1;
+            this.Faction = "Melee";
+            this.AbilityPoints = abilityPoints;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Staff();
+        }
+
+        public Druid(string name, int level)
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = healthPoints;
+            this.HealthPoints = 100;
             this.Faction = "Melee";
             this.AbilityPoints = 10;
+            this.BodyArmor = new LeatherVest();
+            this.Weapon = new Staff();
+        }
+
+        public Druid(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = 100;
+            this.Faction = "Melee";
+            this.AbilityPoints = abilityPoints;
             this.BodyArmor = new LeatherVest();
             this.Weapon = new Staff();
         }

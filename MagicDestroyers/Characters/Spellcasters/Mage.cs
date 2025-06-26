@@ -2,6 +2,7 @@
 {
     using System;
     using MagicDestroyers.Armors.Cloth;
+    using MagicDestroyers.Armors.Leather;
     using MagicDestroyers.Armors.Mail;
     using MagicDestroyers.Weapons.Blunt;
     using MagicDestroyers.Weapons.Sharp;
@@ -139,13 +140,35 @@
             }
         }
 
-        public Mage(string name, int level, int healthPoints)
+        public Mage()
+        {
+            this.Name = "Bob";
+            this.Level = level;
+            this.HealthPoints = 1;
+            this.Faction = "Melee";
+            this.AbilityPoints = abilityPoints;
+            this.BodyArmor = new ClothRobe();
+            this.Weapon = new Staff();
+        }
+
+        public Mage(string name, int level)
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = healthPoints;
+            this.HealthPoints = 100;
             this.Faction = "Melee";
             this.AbilityPoints = 10;
+            this.BodyArmor = new ClothRobe();
+            this.Weapon = new Staff();
+        }
+
+        public Mage(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = 100;
+            this.Faction = "Melee";
+            this.AbilityPoints = abilityPoints;
             this.BodyArmor = new ClothRobe();
             this.Weapon = new Staff();
         }

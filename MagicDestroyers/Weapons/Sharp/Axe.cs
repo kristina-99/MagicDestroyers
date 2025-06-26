@@ -28,7 +28,7 @@ namespace MagicDestroyers.Weapons.Sharp
 
         public Axe()
         {
-
+            this.Damage = 10;
         }
 
         public void HackNSlash()

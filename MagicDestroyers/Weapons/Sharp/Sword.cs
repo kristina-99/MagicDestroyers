@@ -28,7 +28,7 @@ namespace MagicDestroyers.Weapons.Sharp
 
         public Sword()
         {
-
+            this.Damage = 10;
         }
 
         public void Bloodthirst()

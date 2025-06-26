@@ -1,6 +1,8 @@
 ﻿namespace MagicDestroyers.Characters.Melee
 {
     using System;
+    using MagicDestroyers.Armors.Cloth;
+    using MagicDestroyers.Armors.Leather;
     using MagicDestroyers.Armors.Mail;
     using MagicDestroyers.Weapons.Blunt;
     using MagicDestroyers.Weapons.Sharp;
@@ -139,13 +141,35 @@
             }
         }
 
-        public Knight(string name, int level, int healthPoints)
+        public Knight()
+        {
+            this.Name = "Bob";
+            this.Level = level;
+            this.HealthPoints = 1;
+            this.Faction = "Melee";
+            this.AbilityPoints = abilityPoints;
+            this.BodyArmor = new Chainlink();
+            this.Weapon = new Hammer();
+        }
+
+        public Knight(string name, int level)
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = healthPoints;
+            this.HealthPoints = 100;
             this.Faction = "Melee";
             this.AbilityPoints = 10;
+            this.BodyArmor = new Chainlink();
+            this.Weapon = new Hammer();
+        }
+
+        public Knight(string name, int level, int abilityPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = 100;
+            this.Faction = "Melee";
+            this.AbilityPoints = abilityPoints;
             this.BodyArmor = new Chainlink();
             this.Weapon = new Hammer();
         }

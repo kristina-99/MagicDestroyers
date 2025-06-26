@@ -28,7 +28,7 @@ namespace MagicDestroyers.Weapons.Blunt
 
         public Staff()
         {
-
+            this.Damage = 10;
         }
 
         public void Empower()
