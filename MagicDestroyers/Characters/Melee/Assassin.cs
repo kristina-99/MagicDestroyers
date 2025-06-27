@@ -138,25 +138,15 @@
         }
 
         public Assassin()
+            : this("Assassin", 1)
         {
-            this.Name = "Bob";
-            this.Level = level;
-            this.HealthPoints = 1;
-            this.Faction = "Melee";
-            this.AbilityPoints = abilityPoints;
-            this.BodyArmor = new LeatherVest();
-            this.Weapon = new Sword();
+
         }
 
         public Assassin(string name, int level)
-        {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Melee";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new LeatherVest();
-            this.Weapon = new Sword();
+            : this(name, level, 10)
+        { 
+        
         }
 
         public Assassin(string name, int level, int abilityPoints)

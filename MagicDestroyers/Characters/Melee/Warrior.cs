@@ -138,25 +138,13 @@
         }
 
         public Warrior()
+            : this("Warrior", 1)
         {
-            this.Name = "Bob";
-            this.Level = level;
-            this.HealthPoints = 1;
-            this.Faction = "Melee";
-            this.AbilityPoints = abilityPoints;
-            this.BodyArmor = new Chainlink();
-            this.Weapon = new Axe();
         }
 
         public Warrior(string name, int level)
+            : this(name, level, 10)
         {
-            this.Name = name;
-            this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Melee";
-            this.AbilityPoints = 10;
-            this.BodyArmor = new Chainlink();
-            this.Weapon = new Axe();
         }
 
         public Warrior(string name, int level, int abilityPoints)
