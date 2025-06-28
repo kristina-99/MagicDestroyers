@@ -1,12 +1,20 @@
 ﻿namespace MagicDestroyers.Characters.Melee
 {
     using System;
-    using MagicDestroyers.Armors.Cloth;
-    using MagicDestroyers.Armors.Leather;
     using MagicDestroyers.Armors.Mail;
     using MagicDestroyers.Weapons.Sharp;
+
     public class Warrior
     {
+        private const string DEFAULT_NAME = "Warrior";
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_ABILITY_POINTS = 10;
+        private const int DEFAULT_HEALTH_POINTS = 100;
+        private const string DEFAULT_FACTION = "Melee";
+
+        private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
+        private readonly Axe DEFAULT_WEAPON = new Axe();
+
         private string faction;
         private string name;
 
@@ -138,12 +146,12 @@
         }
 
         public Warrior()
-            : this("Warrior", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
         }
 
         public Warrior(string name, int level)
-            : this(name, level, 10)
+            : this(name, level, DEFAULT_ABILITY_POINTS)
         {
         }
 
@@ -151,11 +159,11 @@
         {
             this.Name = name;
             this.Level = level;
-            this.HealthPoints = 100;
-            this.Faction = "Melee";
+            this.HealthPoints = DEFAULT_HEALTH_POINTS;
+            this.Faction = DEFAULT_FACTION;
             this.AbilityPoints = abilityPoints;
-            this.BodyArmor = new Chainlink();
-            this.Weapon = new Axe();
+            this.BodyArmor = DEFAULT_BODY_ARMOR;
+            this.Weapon = DEFAULT_WEAPON;
         }
 
         public void Strike()
