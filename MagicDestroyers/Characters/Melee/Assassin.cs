@@ -3,6 +3,7 @@
     using System;
     using System.Data;
     using MagicDestroyers.Armors.Leather;
+    using MagicDestroyers.Characters.Enumerations;
     using MagicDestroyers.Weapons.Sharp;
 
     public class Assassin
@@ -11,14 +12,14 @@
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_ABILITY_POINTS = 10;
         private const int DEFAULT_HEALTH_POINTS = 100;
-        private const string DEFAULT_FACTION = "Melee";
+        private const Factions DEFAULT_FACTION = Factions.Melee;
 
         private readonly LeatherVest DEFAULT_BODY_ARMOR = new LeatherVest();
         private readonly Sword DEFAULT_WEAPON = new Sword();
 
 
 
-        private string faction;
+        private Factions faction;
         private string name;
 
         private int abilityPoints;
@@ -28,7 +29,7 @@
         private LeatherVest bodyArmor;
         private Sword weapon;
 
-        public string Faction 
+        public Factions Faction 
         {
             get
             {
@@ -36,15 +37,7 @@
             }
             set
             {
-                if (value == "Melee" || value == "Spellcaster")
-                {
-                    this.faction = value;
-                }
-                else
-                {
-                    this.faction = "Spellcaster";
-                    Console.WriteLine("Inappropriate faction! Should be \"Melee\" or \"Spellcaster\"");
-                }
+                this.faction = value;
             }
         }
         public string Name

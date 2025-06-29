@@ -46,6 +46,7 @@
     <Compile Include="Armors\Cloth\ClothRobe.cs" />
     <Compile Include="Armors\Leather\LeatherVest.cs" />
     <Compile Include="Armors\Mail\Chainlink.cs" />
+    <Compile Include="Characters\Enumerations\Factions.cs" />
     <Compile Include="Characters\Melee\Assassin.cs" />
     <Compile Include="Characters\Melee\Knight.cs" />
     <Compile Include="Characters\Melee\Warrior.cs" />
