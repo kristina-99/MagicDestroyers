@@ -5,8 +5,9 @@ namespace MagicDestroyers.Armors.Mail
     public class Chainlink : Armor
     {
         public Chainlink()
+            : base()
         {
-            this.ArmorPoints = 10;
+
         }
     }
 }

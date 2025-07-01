@@ -55,12 +55,10 @@
         }
 
         public Druid(string name, int level, int manaPoints)
+            : base(name, level, manaPoints)
         {
-            this.Name = name;
-            this.Level = level;
             this.HealthPoints = DEFAULT_HEALTH_POINTS;
             this.Faction = DEFAULT_FACTION;
-            this.ManaPoints = manaPoints;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
             this.Weapon = DEFAULT_WEAPON;
         }

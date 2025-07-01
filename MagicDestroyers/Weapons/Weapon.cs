@@ -29,5 +29,10 @@ namespace MagicDestroyers.Weapons
                 }
             }
         }
+
+        public Weapon()
+        { 
+        
+        }
     }
 }

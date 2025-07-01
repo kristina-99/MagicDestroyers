@@ -29,5 +29,10 @@ namespace MagicDestroyers.Armors
                 }
             }
         }
+
+        public Armor()
+        { 
+        
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace MagicDestroyers.Characters.Melee
 {
     using System;
+    using System.Collections.Generic;
     using MagicDestroyers.Armors.Mail;
     using MagicDestroyers.Characters.Enumerations;
     using MagicDestroyers.Weapons.Sharp;
@@ -53,12 +54,10 @@
         }
 
         public Warrior(string name, int level, int abilityPoints)
+            : base(name,level,abilityPoints)
         {
-            this.Name = name;
-            this.Level = level;
             this.HealthPoints = DEFAULT_HEALTH_POINTS;
             this.Faction = DEFAULT_FACTION;
-            this.AbilityPoints = abilityPoints;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
             this.Weapon = DEFAULT_WEAPON;
         }

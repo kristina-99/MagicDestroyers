@@ -79,5 +79,16 @@ namespace MagicDestroyers.Characters
                 }
             }
         }
+
+        public Character()
+        { 
+        
+        }
+
+        public Character(string name, int level)
+        {
+            this.Name = name;
+            this.Level = level;
+        }
     }
 }

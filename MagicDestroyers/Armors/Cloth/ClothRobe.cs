@@ -5,8 +5,9 @@ namespace MagicDestroyers.Armors.Cloth
     public class ClothRobe : Armor
     {
         public ClothRobe()
+            : base()
         {
-            this.ArmorPoints = 10;
+
         }
     }
 }
