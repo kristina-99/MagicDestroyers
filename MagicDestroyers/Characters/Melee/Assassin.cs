@@ -58,8 +58,8 @@
         public Assassin(string name, int level, int abilityPoints)
             : base(name,level,abilityPoints)
         {
-            this.HealthPoints = DEFAULT_HEALTH_POINTS;
-            this.Faction = DEFAULT_FACTION;
+            base.HealthPoints = DEFAULT_HEALTH_POINTS;
+            base.Faction = DEFAULT_FACTION;
             this.BodyArmor = DEFAULT_BODY_ARMOR;
             this.Weapon = DEFAULT_WEAPON;
         }
