@@ -49,6 +49,8 @@
     <Compile Include="Armors\Mail\Chainlink.cs" />
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Characters\Enumerations\Factions.cs" />
+    <Compile Include="Characters\Interfaces\IAttack.cs" />
+    <Compile Include="Characters\Interfaces\IDefend.cs" />
     <Compile Include="Characters\Melee\Assassin.cs" />
     <Compile Include="Characters\Melee\Knight.cs" />
     <Compile Include="Characters\Melee\Melee.cs" />

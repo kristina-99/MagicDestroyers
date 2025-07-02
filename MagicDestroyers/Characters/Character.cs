@@ -1,9 +1,10 @@
 ﻿using System;
 using MagicDestroyers.Characters.Enumerations;
+using MagicDestroyers.Characters.Interfaces;
 
 namespace MagicDestroyers.Characters
 {
-    public class Character
+    public class Character : IAttack, IDefend
     {
         private Factions faction;
         private string name;
@@ -89,6 +90,21 @@ namespace MagicDestroyers.Characters
         {
             this.Name = name;
             this.Level = level;
+        }
+
+        public void Attack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SpecialAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Defend()
+        {
+            throw new NotImplementedException();
         }
     }
 }
