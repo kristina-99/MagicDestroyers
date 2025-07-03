@@ -4,7 +4,7 @@ using MagicDestroyers.Characters.Interfaces;
 
 namespace MagicDestroyers.Characters
 {
-    public class Character : IAttack, IDefend
+    public abstract class Character : IAttack, IDefend
     {
         private Factions faction;
         private string name;
