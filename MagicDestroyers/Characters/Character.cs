@@ -1,6 +1,8 @@
 ﻿using System;
+using MagicDestroyers.Armors;
 using MagicDestroyers.Characters.Enumerations;
 using MagicDestroyers.Characters.Interfaces;
+using MagicDestroyers.Weapons;
 
 namespace MagicDestroyers.Characters
 {
@@ -10,6 +12,8 @@ namespace MagicDestroyers.Characters
         private string name;
         private int healthPoints;
         private int level;
+        private Armor bodyArmor;
+        private Weapon weapon;
 
         public Factions Faction
         {
@@ -81,6 +85,29 @@ namespace MagicDestroyers.Characters
             }
         }
 
+        public Armor BodyArmor
+        {
+            get
+            {
+                return this.bodyArmor;
+            }
+            set
+            {
+                this.bodyArmor = value;
+            }
+        }
+        public Weapon Weapon
+        {
+            get
+            {
+                return this.weapon;
+            }
+            set
+            {
+                this.weapon = value;
+            }
+        }
+
         public Character()
         { 
         
@@ -92,19 +119,10 @@ namespace MagicDestroyers.Characters
             this.Level = level;
         }
 
-        public void Attack()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Attack();
 
-        public void SpecialAttack()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void SpecialAttack();
 
-        public void Defend()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Defend();
     }
 }

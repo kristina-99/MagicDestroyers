@@ -16,32 +16,6 @@
         private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
-        private ClothRobe bodyArmor;
-        private Staff weapon;
-
-        public ClothRobe BodyArmor 
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-        public Staff Weapon 
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
         public Mage()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
@@ -59,8 +33,8 @@
         {
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void ArcaneWrath()
@@ -76,6 +50,21 @@
         public void Meditation()
         {
             throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            this.ArcaneWrath();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.Firewall();
+        }
+
+        public override void Defend()
+        {
+            this.Meditation();
         }
     }
 }

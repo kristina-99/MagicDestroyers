@@ -59,6 +59,7 @@
     <Compile Include="Characters\Spellcasters\Mage.cs" />
     <Compile Include="Characters\Spellcasters\Necromancer.cs" />
     <Compile Include="Characters\Spellcasters\Spellcaster.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="InfoHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Weapons\Blunt\Blunt.cs" />

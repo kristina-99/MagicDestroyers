@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using MagicDestroyers.Armors.Mail;
     using MagicDestroyers.Characters.Enumerations;
+    using MagicDestroyers.Characters.Interfaces;
     using MagicDestroyers.Weapons.Sharp;
 
     public class Warrior : Melee
@@ -16,33 +17,7 @@
 
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
         private readonly Axe DEFAULT_WEAPON = new Axe();
-
-        private Chainlink bodyArmor;
-        private Axe weapon;
-
-        public Chainlink BodyArmor 
-        {
-            get
-            {
-                return this.bodyArmor;
-            }
-            set
-            {
-                this.bodyArmor = value;
-            }
-        }
-        public Axe Weapon 
-        {
-            get
-            {
-                return this.weapon;
-            }
-            set
-            {
-                this.weapon = value;
-            }
-        }
-
+        
         public Warrior()
             : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
@@ -58,8 +33,8 @@
         {
             base.HealthPoints = DEFAULT_HEALTH_POINTS;
             base.Faction = DEFAULT_FACTION;
-            this.BodyArmor = DEFAULT_BODY_ARMOR;
-            this.Weapon = DEFAULT_WEAPON;
+            base.BodyArmor = DEFAULT_BODY_ARMOR;
+            base.Weapon = DEFAULT_WEAPON;
         }
 
         public void Strike()
@@ -75,6 +50,21 @@
         public void SkinHarden()
         {
             throw new NotImplementedException();
+        }
+
+        public override void Attack()
+        {
+            this.Strike();
+        }
+
+        public override void SpecialAttack()
+        {
+            this.Execute();
+        }
+
+        public override void Defend()
+        {
+            this.SkinHarden();
         }
     }
 }
