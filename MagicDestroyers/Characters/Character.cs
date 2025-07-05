@@ -14,6 +14,8 @@ namespace MagicDestroyers.Characters
         private int level;
         private Armor bodyArmor;
         private Weapon weapon;
+        private bool isAlive;
+        private int scores;
 
         public Factions Faction
         {
@@ -108,6 +110,30 @@ namespace MagicDestroyers.Characters
             }
         }
 
+        public bool IsAlive
+        {
+            get 
+            {
+                return this.isAlive;
+            }
+            set 
+            {
+                this.isAlive = value;
+            }
+        }
+
+        public int Scores
+        {
+            get 
+            {
+                return this.scores;
+            }
+            set 
+            {
+                this.scores = value;
+            }
+        }
+
         public Character()
         { 
         
@@ -119,10 +145,15 @@ namespace MagicDestroyers.Characters
             this.Level = level;
         }
 
-        public abstract void Attack();
+        public abstract int Attack();
 
-        public abstract void SpecialAttack();
+        public abstract int SpecialAttack();
 
         public abstract void Defend();
+
+        public void TakeDamage(int damage)
+        { 
+            this.healthPoints -= damage;
+        }
     }
 }

@@ -37,12 +37,12 @@
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void ArcaneWrath()
+        public int ArcaneWrath()
         {
             throw new NotImplementedException();
         }
 
-        public void Firewall()
+        public int Firewall()
         {
             throw new NotImplementedException();
         }
@@ -52,14 +52,14 @@
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.ArcaneWrath();
+            return this.ArcaneWrath();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Firewall();
+            return this.Firewall();
         }
 
         public override void Defend()

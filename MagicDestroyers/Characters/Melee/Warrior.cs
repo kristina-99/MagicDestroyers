@@ -37,12 +37,12 @@
             base.Weapon = DEFAULT_WEAPON;
         }
 
-        public void Strike()
+        public int Strike()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 10;
         }
 
-        public void Execute()
+        public int Execute()
         {
             throw new NotImplementedException();
         }
@@ -52,14 +52,14 @@
             throw new NotImplementedException();
         }
 
-        public override void Attack()
+        public override int Attack()
         {
-            this.Strike();
+            return this.Strike();
         }
 
-        public override void SpecialAttack()
+        public override int SpecialAttack()
         {
-            this.Execute();
+            return this.Execute();
         }
 
         public override void Defend()
