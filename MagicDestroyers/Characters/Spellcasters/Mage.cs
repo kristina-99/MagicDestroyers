@@ -42,14 +42,14 @@
             throw new NotImplementedException();
         }
 
-        public int Firewall()
+        public int Fireball()
         {
-            throw new NotImplementedException();
+            return base.Weapon.Damage + 10;
         }
 
-        public void Meditation()
+        public int Meditation()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
         public override int Attack()
@@ -59,12 +59,12 @@
 
         public override int SpecialAttack()
         {
-            return this.Firewall();
+            return this.Fireball();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.Meditation();
+            return this.Meditation();
         }
     }
 }

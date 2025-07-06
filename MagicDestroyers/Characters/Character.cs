@@ -149,11 +149,32 @@ namespace MagicDestroyers.Characters
 
         public abstract int SpecialAttack();
 
-        public abstract void Defend();
+        public abstract int Defend();
 
-        public void TakeDamage(int damage)
-        { 
-            this.healthPoints -= damage;
+        public void TakeDamage(int damage, string attackerName)
+        {
+            if (this.Defend() < damage)
+            {
+                this.healthPoints = this.healthPoints - damage + this.Defend();
+
+                if (this.healthPoints <= 0)
+                {
+                    this.IsAlive = false;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Haha! Your damage was not enough to harm me!");
+            }
+
+            if (!this.IsAlive)
+            {
+                Console.WriteLine($"{this.name} received {damage} from {attackerName} damage and is now dead!");
+            }
+            else
+            {
+                Console.WriteLine($"{this.name} received {damage} from {attackerName} and now has {this.healthPoints} health points left!");
+            }
         }
     }
 }

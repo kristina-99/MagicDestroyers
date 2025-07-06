@@ -47,9 +47,9 @@
             throw new NotImplementedException();
         }
 
-        public void SkinHarden()
+        public int SkinHarden()
         {
-            throw new NotImplementedException();
+            return base.BodyArmor.ArmorPoints + 5;
         }
 
         public override int Attack()
@@ -62,9 +62,9 @@
             return this.Execute();
         }
 
-        public override void Defend()
+        public override int Defend()
         {
-            this.SkinHarden();
+            return this.SkinHarden();
         }
     }
 }
