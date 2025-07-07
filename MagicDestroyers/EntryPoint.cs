@@ -74,7 +74,7 @@ namespace MagicDestroyers
 
                 }
 
-                meleeTeam[currentMelee].TakeDamage(spellTeam[currentSpellcaster].Attack(), meleeTeam[currentSpellcaster].Name);
+                meleeTeam[currentMelee].TakeDamage(spellTeam[currentSpellcaster].Attack(), spellTeam[currentSpellcaster].Name);
 
 
                 if (!meleeTeam[currentMelee].IsAlive)

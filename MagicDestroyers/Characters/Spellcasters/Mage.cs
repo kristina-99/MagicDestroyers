@@ -7,23 +7,17 @@
 
     public class Mage : Spellcaster
     {
-        private const string DEFAULT_NAME = "Mage";
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_MANA_POINTS = 10;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const Factions DEFAULT_FACTION = Factions.Melee;
-
         private readonly ClothRobe DEFAULT_BODY_ARMOR = new ClothRobe();
         private readonly Staff DEFAULT_WEAPON = new Staff();
 
         public Mage()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Mage.NAME, Consts.Mage.LEVEL)
         {
 
         }
 
         public Mage(string name, int level)
-            : this(name, level, DEFAULT_MANA_POINTS)
+            : this(name, level, Consts.Mage.MANA_POINTS)
         {
 
         }
@@ -31,8 +25,8 @@
         public Mage(string name, int level, int manaPoints)
             : base(name,level,manaPoints)
         {
-            base.HealthPoints = DEFAULT_HEALTH_POINTS;
-            base.Faction = DEFAULT_FACTION;
+            base.HealthPoints = Consts.Mage.HEALTH_POINTS;
+            base.Faction = Consts.Mage.FACTION;
             base.BodyArmor = DEFAULT_BODY_ARMOR;
             base.Weapon = DEFAULT_WEAPON;
             base.IsAlive = true;

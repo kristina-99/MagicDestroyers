@@ -9,30 +9,24 @@
 
     public class Warrior : Melee
     {
-        private const string DEFAULT_NAME = "Warrior";
-        private const int DEFAULT_LEVEL = 1;
-        private const int DEFAULT_ABILITY_POINTS = 10;
-        private const int DEFAULT_HEALTH_POINTS = 100;
-        private const Factions DEFAULT_FACTION = Factions.Melee;
-
         private readonly Chainlink DEFAULT_BODY_ARMOR = new Chainlink();
         private readonly Axe DEFAULT_WEAPON = new Axe();
         
         public Warrior()
-            : this(DEFAULT_NAME, DEFAULT_LEVEL)
+            : this(Consts.Warrior.NAME, Consts.Warrior.LEVEL)
         {
         }
 
         public Warrior(string name, int level)
-            : this(name, level, DEFAULT_ABILITY_POINTS)
+            : this(name, level, Consts.Warrior.ABILITY_POINTS)
         {
         }
 
         public Warrior(string name, int level, int abilityPoints)
             : base(name,level,abilityPoints)
         {
-            base.HealthPoints = DEFAULT_HEALTH_POINTS;
-            base.Faction = DEFAULT_FACTION;
+            base.HealthPoints = Consts.Warrior.HEALTH_POINTS;
+            base.Faction = Consts.Warrior.FACTION;
             base.BodyArmor = DEFAULT_BODY_ARMOR;
             base.Weapon = DEFAULT_WEAPON;
             base.IsAlive = true;
