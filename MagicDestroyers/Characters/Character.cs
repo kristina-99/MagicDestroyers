@@ -169,11 +169,19 @@ namespace MagicDestroyers.Characters
 
             if (!this.IsAlive)
             {
-                Console.WriteLine($"{this.name} received {damage} from {attackerName} damage and is now dead!");
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName} and is now dead!");
             }
             else
             {
-                Console.WriteLine($"{this.name} received {damage} from {attackerName} and now has {this.healthPoints} health points left!");
+                Console.WriteLine($"{this.name} received {damage} damage from {attackerName} and now has {this.healthPoints} health points left!");
+            }
+        }
+
+        public void WonBattle()
+        {
+            if (this.scores % 10 == 0)
+            {
+                this.level++;
             }
         }
     }

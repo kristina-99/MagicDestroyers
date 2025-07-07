@@ -59,6 +59,7 @@ namespace MagicDestroyers
 
                 if (!spellTeam[currentSpellcaster].IsAlive)
                 {
+                    meleeTeam[currentMelee].WonBattle();
                     spellTeam.Remove(spellTeam[currentSpellcaster]);
 
                     if (spellTeam.Count == 0)
@@ -78,6 +79,7 @@ namespace MagicDestroyers
 
                 if (!meleeTeam[currentMelee].IsAlive)
                 {
+                    spellTeam[currentSpellcaster].WonBattle();
                     meleeTeam.Remove(meleeTeam[currentMelee]);
 
                     if (meleeTeam.Count == 0)
