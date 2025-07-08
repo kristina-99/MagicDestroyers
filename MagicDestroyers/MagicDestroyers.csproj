@@ -63,6 +63,7 @@
     <Compile Include="EntryPoint.cs" />
     <Compile Include="InfoHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools.cs" />
     <Compile Include="Weapons\Blunt\Blunt.cs" />
     <Compile Include="Weapons\Blunt\Hammer.cs" />
     <Compile Include="Weapons\Blunt\Staff.cs" />
