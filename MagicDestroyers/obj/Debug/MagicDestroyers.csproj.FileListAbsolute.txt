@@ -5,3 +5,4 @@ C:\Users\krist\source\repos\MagicDestroyers\MagicDestroyers\obj\Debug\MagicDestr
 C:\Users\krist\source\repos\MagicDestroyers\MagicDestroyers\obj\Debug\MagicDestroyers.csproj.CoreCompileInputs.cache
 C:\Users\krist\source\repos\MagicDestroyers\MagicDestroyers\obj\Debug\MagicDestroyers.exe
 C:\Users\krist\source\repos\MagicDestroyers\MagicDestroyers\obj\Debug\MagicDestroyers.pdb
+C:\Users\krist\source\repos\MagicDestroyers\MagicDestroyers\obj\Debug\MagicDestroyers.exe.config

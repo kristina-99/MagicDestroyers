@@ -13,25 +13,21 @@ namespace MagicDestroyers
     {
         static void Main()
         {
+            bool gameOver = false;
+
             Random rng = new Random();
 
             Melee currentMelee;
             Spellcaster currentSpellcaster;
 
-            bool gameOver = false;
-
             List<Character> characters = new List<Character>()
             {
                 new Warrior(),
-                new Warrior(),
-                new Warrior(),
-                //new Knight(),
-                //new Assassin(),
+                new Knight(),
+                new Assassin(),
                 new Mage(),
-                new Mage(),
-                new Mage()
-                //new Necromancer(),
-                //new Druid()
+                new Necromancer(),
+                new Druid()
             };
 
             List<Melee> meleeTeam = new List<Melee>();
@@ -49,6 +45,8 @@ namespace MagicDestroyers
                 }
             }
 
+            InfoHandler.Initialization(characters);
+
             while (!gameOver)
             {
                 currentMelee = meleeTeam[rng.Next(0, meleeTeam.Count)];
@@ -64,7 +62,7 @@ namespace MagicDestroyers
 
                     if (spellTeam.Count == 0)
                     {
-                        Console.WriteLine("Melee team wins!");
+                        Tools.ColorfulWriteLine("\nMelee team wins!", ConsoleColor.Red);
                         break;
                     }
                     else
@@ -84,7 +82,7 @@ namespace MagicDestroyers
 
                     if (meleeTeam.Count == 0)
                     {
-                        Console.WriteLine("Spell team wins!");
+                        Tools.ColorfulWriteLine("\nSpell team wins!", ConsoleColor.Red);
                         break;
                     }
                     else
@@ -92,6 +90,10 @@ namespace MagicDestroyers
                         currentMelee = meleeTeam[rng.Next(0, meleeTeam.Count)];
                     }
                 }
+
+                InfoHandler.UpdateFullInfo(characters);
+                InfoHandler.Save(characters);
+                InfoHandler.PrintFullInfo();
             }
         }
     }
